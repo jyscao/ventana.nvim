@@ -1,7 +1,7 @@
-# Ventana.nvim
+# ventana.nvim
 
 Ventana.nvim provides 2 main commands: `VentanaTranspose` & `VentanaShift`, whose actions can be
-seen in the preview GIFs below.
+seen in the preview below. The active window and window sizes are preserved after the operations.
 
 #### `VentanaTranspose`
 
