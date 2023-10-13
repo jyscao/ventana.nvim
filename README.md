@@ -4,6 +4,7 @@ Ventana.nvim provides 2 main commands: `VentanaTranspose` & `VentanaShift`, whos
 seen in the preview GIFs below.
 
 #### `VentanaTranspose`
+![ventana-transpose](https://github.com/jyscao/ventana.nvim/assets/12605746/ef5e2bcd-8f2b-4af8-9de0-a8ed39c5f439)
 
 
 #### `VentanaShift`
@@ -14,6 +15,7 @@ There is also a 3rd bonus command `VentanaShiftMaintainLinear`, which is like `V
 instead of keeping the sizes of each window-buffer pair the same, it maintains the exact layout
 of each window's position & size, and only shuffles the buffers across them. This only works for
 "linear" layouts, which are layouts containing a single row or column of leaf windows only.
+![ventana-shift-maintain-linear](https://github.com/jyscao/ventana.nvim/assets/12605746/8b0ba557-6cc4-4c57-ba8e-d8af5769e783)
 
 Expect API changes & bugs
 
