@@ -1,6 +1,6 @@
 # ventana.nvim
 
-Ventana.nvim provides 2 main commands: `VentanaTranspose` & `VentanaShift`, whose actions can be
+ventana.nvim provides 2 main commands: `VentanaTranspose` & `VentanaShift`, whose actions can be
 seen in the preview below. The active window and window sizes are preserved after the operations.
 
 #### `VentanaTranspose`
@@ -36,7 +36,7 @@ of each window's position & size, and only shuffles the buffers across them. Thi
 
 Personally I'm on Neovim v0.10, but any version that has the
 [`winlayout()`](https://neovim.io/doc/user/builtin.html#winlayout()) function should suffice. You
-can check its existence with the command `:echo winlayout()`.
+can confirm its existence with the command `:echo winlayout()`.
 
 ### Installation
 
@@ -51,8 +51,8 @@ with `lazy.nvim`:
 
 ### Configuration
 
-There is no real configuration of as of now, although that may change in the near future should I
-add additional features.
+There is no real configuration as of now, although that may change in the near future should I add
+additional features.
 
 No default mappings are provided, but here are the mappings I personally use:
 
