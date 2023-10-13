@@ -70,12 +70,12 @@ local function get_win_by_bufnr(lotr, bufnr)
 end
 
 -- shifts the windows in the top level splits
-function M.shift(maintain_when_possible)
+function M.shift(maintain_layout_if_possible)
   local resize_cmd
   local active_bufnr = vim.fn.winbufnr(0)
   local lotr = layout_tree.get()
 
-  local maintain_linear_layout = maintain_when_possible and layout_tree.is_linear_layout(lotr)
+  local maintain_linear_layout = maintain_layout_if_possible and layout_tree.is_linear_layout(lotr)
   if maintain_linear_layout then
     -- getting resize_cmd here maintains the window sizes of the entire layout; this only 
     -- works for linear layouts, i.e. layouts w/ a single row or col of leaf windows only
