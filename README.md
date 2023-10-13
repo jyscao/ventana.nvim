@@ -28,7 +28,9 @@ error. This command shifts your top level splits as you'd expect them to.
 There is also a 3rd bonus command `VentanaShiftMaintainLinear`, which is like `VentanaShift`, but
 instead of keeping the sizes of each window-buffer pair the same, it maintains the exact layout
 of each window's position & size, and only shuffles the buffers across them. This only works for
-"linear" layouts, which are layouts containing a single row or column of leaf windows only.
+"linear" layouts, which are layouts containing a single row or column of leaf windows only. If you
+were to execute this command on a non-linear layout, it would simply fallback to the same behavior
+as `VentanaShift`.
 
 ![ventana-shift-maintain-linear](https://github.com/jyscao/ventana.nvim/assets/12605746/904b73e2-db0d-46ef-939c-d6825f27eb8f)
 
