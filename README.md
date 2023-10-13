@@ -8,7 +8,7 @@ seen in the preview below. The active window and window sizes are preserved afte
 Flips all your windows along the main diagonal running from the top left corner to the bottom right
 corner, much like the matrix transpose operation in linear algebra.
 
-![ventana-transpose](https://github.com/jyscao/ventana.nvim/assets/12605746/ef5e2bcd-8f2b-4af8-9de0-a8ed39c5f439)
+![ventana-transpose](https://github.com/jyscao/ventana.nvim/assets/12605746/a14621cc-86bb-4524-a3ab-3dd0c55e0bef)
 
 
 
@@ -19,6 +19,8 @@ linear windows on the same split level. If you try to do the rotation against a 
 sub-splits of its own, you'd encounter the `E443: Cannot rotate when another window is split`
 error. This command shifts your top level splits as you'd expect them to.
 
+![ventana-shift](https://github.com/jyscao/ventana.nvim/assets/12605746/56aa9b57-aa18-4a8b-be25-c390e39523ce)
+
 
 
 ##### `VentanaShiftMaintainLinear`
@@ -28,7 +30,7 @@ instead of keeping the sizes of each window-buffer pair the same, it maintains t
 of each window's position & size, and only shuffles the buffers across them. This only works for
 "linear" layouts, which are layouts containing a single row or column of leaf windows only.
 
-![ventana-shift-maintain-linear](https://github.com/jyscao/ventana.nvim/assets/12605746/8b0ba557-6cc4-4c57-ba8e-d8af5769e783)
+![ventana-shift-maintain-linear](https://github.com/jyscao/ventana.nvim/assets/12605746/904b73e2-db0d-46ef-939c-d6825f27eb8f)
 
 
 
