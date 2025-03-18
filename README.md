@@ -86,6 +86,6 @@ bug, please open an issue.
 
 Much of the implementation details, especially for getting
 and setting the windows layout tree, have been borrowed from
-[nvim-dbee](https://github.com/kndndrj/nvim-dbee/blob/master/lua/dbee/utils/layout.lua),
+[nvim-dbee](https://github.com/kndndrj/nvim-dbee/blob/master/lua/dbee/layouts/tools.lua),
 which in turn owes its underlying logic to [this excellent
 answer](https://vi.stackexchange.com/a/22545/24816) on the Vi and Vim StackExchange.
