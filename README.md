@@ -62,8 +62,8 @@ No default mappings are provided, but here are the mappings I personally use:
 
 ```lua
 vim.keymap.set("n", "<C-w><C-t>", "<Cmd>VentanaTranspose<CR>")
-vim.keymap.set("n", <C-w><C-f>",  "<Cmd>VentanaShift<CR>")
-vim.keymap.set("n", <C-w>f",      "<Cmd>VentanaShiftMaintainLinear<CR>")
+vim.keymap.set("n", "<C-w><C-f>", "<Cmd>VentanaShift<CR>")
+vim.keymap.set("n", "<C-w>f",     "<Cmd>VentanaShiftMaintainLinear<CR>")
 ```
 
 
