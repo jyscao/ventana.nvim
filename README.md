@@ -76,7 +76,7 @@ restored
 * when shifting 2 or more windows that have the same buffer open, the active window cannot be
 reliably returned to its pre-shift state; I do plan on fixing this at some point
 * alternative front-ends for Neovim such as Neovide, Goneovim, Fvim, etc., which use external
-windows were not tested if any of these behave unexpectedly, feel free to let me know
+windows were not tested; if any of these behave unexpectedly, do let me know
 
 Finally, just a note that even though I do use this plugin myself everyday, and find it to be a
 good addition to my workflow, I make no guarantees about its correctness. Should you encounter a
