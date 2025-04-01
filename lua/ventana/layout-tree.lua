@@ -1,17 +1,13 @@
 local M = {}  -- helper module for window layout management
 
--- check if current tab contains focusable (interact-able) floating windows
-local function tab_contains_focusable_floating_wins()
-  local focusable_floats = vim.fn.filter(
-    vim.api.nvim_tabpage_list_wins(vim.api.nvim_get_current_tabpage()),
-    function(_, winid)
-      local win_config = vim.api.nvim_win_get_config(winid)
-      return win_config.relative ~= "" and win_config.focusable
-      -- NOTE: we filter on focusable as well, b/c some plugins relies on non-focusable
-      -- floating windows for their functonalities (e.g. nvim-zh/colorful-winsep.nvim)
+local function tab_contains_floating_wins()
+  for _, win in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
+    local config = vim.api.nvim_win_get_config(win)
+    if config.relative ~= '' then   -- floating windows have relative positioning
+      return true
     end
-  )
-  return #focusable_floats > 0
+  end
+  return false
 end
 
 -- gets the count of focusable non-floating windows
@@ -49,9 +45,8 @@ local function gen_layout_tree(winlayout)
 end
 
 function M.get()
-  -- TODO: improve floating window handling (e.g. add option to auto-close & perform operations)
-  if tab_contains_focusable_floating_wins() then
-    print('Usage warning: please close focusable floating windows first')
+  if tab_contains_floating_wins() then
+    print('Usage Warning: please first close your floating window(s)')
     return
   end
 

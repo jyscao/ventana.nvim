@@ -17,6 +17,10 @@ function M.transpose()
   local active_winnr = vim.fn.tabpagewinnr(vim.fn.tabpagenr())
 
   local lotr = layout_tree.get()
+  if lotr == nil then   -- user has floating window(s) open, so perform noop
+    return
+  end
+
   local resize_cmd = resize.get_cmd_for_transposed(lotr)
 
   -- perform the splits transpose operation & render the new layout
@@ -74,6 +78,9 @@ function M.shift(maintain_layout_if_possible)
   local resize_cmd
   local active_bufnr = vim.fn.winbufnr(0)
   local lotr = layout_tree.get()
+  if lotr == nil then   -- user has floating window(s) open, so perform noop
+    return
+  end
 
   local maintain_linear_layout = maintain_layout_if_possible and layout_tree.is_linear_layout(lotr)
   if maintain_linear_layout then
