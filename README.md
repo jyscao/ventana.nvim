@@ -68,13 +68,15 @@ vim.keymap.set("n", "<C-w>f",     "<Cmd>VentanaShiftMaintainLinear<CR>")
 
 
 
-### Known Issues
+### Known Issues & Caveats
 
 * temporary buffers, such as those used for [vim-fugitive](https://github.com/tpope/vim-fugitive)'s
 commit & [linediff.vim](https://github.com/AndrewRadev/linediff.vim)'s diffing, cannot be properly
 restored
 * when shifting 2 or more windows that have the same buffer open, the active window cannot be
 reliably returned to its pre-shift state; I do plan on fixing this at some point
+* alternative front-ends for Neovim such as Neovide, Goneovim, Fvim, etc., which use external
+windows were not tested if any of these behave unexpectedly, feel free to let me know
 
 Finally, just a note that even though I do use this plugin myself everyday, and find it to be a
 good addition to my workflow, I make no guarantees about its correctness. Should you encounter a
