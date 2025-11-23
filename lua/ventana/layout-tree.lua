@@ -45,6 +45,9 @@ local function gen_layout_tree(winlayout)
 end
 
 function M.get()
+  -- TODO: improve floating window handling:
+  -- * add option to auto-close & perform operations
+  -- * also add floating filetypes to-ignore list, such as nvim-zh/colorful-winsep.nvim (filetype = NvimSeparator)
   if tab_contains_floating_wins() then
     print('Usage Warning: please first close your floating window(s)')
     return
